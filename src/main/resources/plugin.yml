@@ -1,0 +1,8 @@
+name: BlatTweaks
+version: '${project.version}'
+main: ru.blatfan.blattweaks.BlatTweaks
+api-version: '1.19'
+load: STARTUP
+depend: [BlatLibs]
+authors: [BlatFan]
+website: https://github.com/BlatFan
