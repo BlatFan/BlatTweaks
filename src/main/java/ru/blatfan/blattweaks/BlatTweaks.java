@@ -14,6 +14,7 @@ public final class BlatTweaks extends BlatPlugin {
     @Override
     public void onStartEnabling() {
         setPrefix(ChatColor.GRAY +"["+ChatColor.LIGHT_PURPLE+"BlatTweaks"+ChatColor.GRAY+"]"+ChatColor.RESET);
+        setProjectID(116895);
         
         instance=this;
         
@@ -28,7 +29,7 @@ public final class BlatTweaks extends BlatPlugin {
         modules.load();
         
         modules.addDefault("fishing", true);
-        //modules.addDefault("stamina", true);
+        modules.addDefault("stamina", true);
         
         modules.copyDefault(true);
         modules.save();
@@ -38,6 +39,6 @@ public final class BlatTweaks extends BlatPlugin {
         modulesFile();
         
         if(modules.getBoolean("fishing")) BlatFishing.setup(instance);
-        //if(modules.getBoolean("stamina")) BlatStamina.setup(instance);
+        if(modules.getBoolean("stamina")) BlatStamina.setup(instance);
     }
 }
